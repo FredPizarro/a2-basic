@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';  /* component generate */
+import { SearchComponent } from './components/navbar/search.component'; /* component generate */
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent, /* component generate */
+    SearchComponent  /* component generate */
   ],
   imports: [
     BrowserModule,
