@@ -1,0 +1,32 @@
+
+
+<div [ngClass]="{'borde-redo': onTrue()}" [ngStyle]="{'background': '#e0e0e0' }"> <!-- [] for property binding. -->
+    <h2>{{ interpolation }}</h2>
+    <input type="text" value="{{ interpolation }}">
+    <counter [conteo]="valueDefault"></counter>
+</div>
+
+
+<!--
+ {{ }} for interpolation :  Using the double curly braces to indicate that an expression has to be
+                              evaluated. This behaviour is called interpolation. Angular replaces
+                               that name with the string value of the corresponding component property,
+                                so it first evaluates and then converts to a string.
+ -->
+
+<!--
+ [] for property binding : Every DOM property can be written via special attributes on HTML elements
+                           using square brackets []. An HTML attribute can start with pretty much
+                           anything. Property binding by evaluating expressions and setting result
+                           to element properties.
+-->
+
+<!--
+() for event binding  : In Angular 2 there are no directives to keep in mind! By using event binding
+                        we can directly listen to DOM events in our Angular 2 application.            
+ -->
+<!--
+The core syntax of property and event bindings is very simple. On top of the core syntax, Angular
+ provides some syntax sugar to make expressing common programming patterns easier.   It is important
+  to understand that this is just sugar, and it does not change the semantics.
+ -->  

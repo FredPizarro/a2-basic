@@ -5,22 +5,31 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';  /* component generate */
-import { SearchComponent } from './components/navbar/search.component'; /* component generate */
+import { SearchComponent } from './components/navbar/search.component';
+import { TemplateSyntaxComponent } from './components/template-syntax/template-syntax.component';
+import { CounterComponent } from './components/template-syntax/counter.component'; /* component generate */
 
+/* decorator , Angular Modules help organize an application into cohesive blocks of functionality*/
 @NgModule({
   declarations: [
+    /* we can list the components, directives and pipes that are part of the module in the declarations array */
     AppComponent,
     NavbarComponent, /* component generate */
-    SearchComponent  /* component generate */
+    SearchComponent, TemplateSyntaxComponent, CounterComponent  /* component generate */
   ],
   imports: [
+    /* we can import other modules by listing them in the imports array */
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [/*we can list the services that are part of the module in the providers array, but read further on why this should only be used in some cases  */],
+  bootstrap: [
+    /* the bootstrap property is used, providing a list of components that should be used as bootstrap entry points for the application.   */
+    AppComponent
+  ]
 })
+ /* class  */
 export class AppModule { }
 
 /* 
@@ -37,3 +46,5 @@ export class AppModule { }
                                 compressed size is around 190 KB].
 * .../[hash].bundle.map        the SourceMaps corresponding to the previous files
 */
+
+/* We use an Angular Module as the starting point for our applications. */
